@@ -25,13 +25,13 @@ def init_db():
     db.drop_all()
     db.create_all()
 
-    with open("data/user.json") as file:
+    with open("data/user.json", encoding="utf-8") as file:
         insert_data(json.load(file), classes.User)
 
-    with open("data/orders.json") as file:
+    with open("data/orders.json", encoding="utf-8") as file:
         insert_data(json.load(file), classes.Order)
 
-    with open("data/offers.json") as file:
+    with open("data/offers.json", encoding="utf-8") as file:
         insert_data(json.load(file), classes.Offer)
 
 

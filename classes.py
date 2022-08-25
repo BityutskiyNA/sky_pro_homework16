@@ -55,7 +55,7 @@ class Order(db.Model):
     end_date = db.Column(db.Integer)
     address = db.Column(db.String)
     price = db.Column(db.Integer)
-    customer_id = db.Column(db.Integer, db.ForeignKey('offer.id'))
+    customer_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     executor_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
 
